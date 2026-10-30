@@ -1,0 +1,9 @@
+# Layer bên ngoài, clone theo layers.txt
+/layers/
+
+# Thư mục build Yocto
+build/
+
+# DL_DIR / SSTATE_DIR nếu lỡ để trong repo
+downloads/
+sstate-cache/
