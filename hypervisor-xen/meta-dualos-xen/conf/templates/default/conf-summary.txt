@@ -1,0 +1,1 @@
+Embedded Dual-OS: hypervisor-xen (Xen trên QEMU virt ARM64)

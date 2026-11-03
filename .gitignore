@@ -2,7 +2,7 @@
 /layers/
 
 # Thư mục build Yocto
-build/
+build*/
 
 # DL_DIR / SSTATE_DIR nếu lỡ để trong repo
 downloads/

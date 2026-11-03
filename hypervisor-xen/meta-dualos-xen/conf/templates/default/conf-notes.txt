@@ -1,0 +1,4 @@
+Image mẫu:
+    bitbake xen-image-minimal
+Chạy:
+    hypervisor-xen/scripts/run-qemu.sh
