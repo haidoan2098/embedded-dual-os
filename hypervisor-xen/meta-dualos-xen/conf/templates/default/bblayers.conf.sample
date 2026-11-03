@@ -1,0 +1,21 @@
+# POKY_BBLAYERS_CONF_VERSION is increased each time build/conf/bblayers.conf
+# changes incompatibly
+POKY_BBLAYERS_CONF_VERSION = "2"
+
+BBPATH = "${TOPDIR}"
+BBFILES ?= ""
+
+# ##OEROOT## được oe-setup-builddir thay bằng thư mục poky.
+# meta-openembedded được giả định nằm cạnh poky (xem layers.txt).
+# Build dir nằm tại hypervisor-xen/<build>, nên ${TOPDIR}/../ là hypervisor-xen/
+# và ${TOPDIR}/../../ là gốc repo.
+BBLAYERS ?= " \
+  ##OEROOT##/meta \
+  ##OEROOT##/meta-poky \
+  ##OEROOT##/../meta-openembedded/meta-oe \
+  ##OEROOT##/../meta-openembedded/meta-python \
+  ##OEROOT##/../meta-openembedded/meta-networking \
+  ##OEROOT##/../meta-openembedded/meta-filesystems \
+  ${TOPDIR}/../../layers/meta-virtualization \
+  ${TOPDIR}/../meta-dualos-xen \
+  "
