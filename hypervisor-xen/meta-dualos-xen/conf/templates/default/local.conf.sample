@@ -35,7 +35,5 @@ BB_DISKMON_DIRS ??= "\
 PACKAGECONFIG:append:pn-qemu-system-native = " sdl"
 CONF_VERSION = "2"
 
-# Mỗi domU một multiconfig (kernel và rootfs riêng). Tên phải khớp các file
-# meta-dualos-xen/conf/multiconfig/domu1.conf và domu2.conf; build bằng
-# "bitbake mc:domu1:<image>" hoặc "bitbake dualos-dom0less-dtb" để build tất cả.
+# Mỗi domU một multiconfig: meta-dualos-xen/conf/multiconfig/{domu1,domu2}.conf
 BBMULTICONFIG = "domu1 domu2"
