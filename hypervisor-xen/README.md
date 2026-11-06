@@ -80,5 +80,4 @@ Khác thực tế, do QEMU `virt`:
 ## Tài liệu
 
 - [docs/why-xen-dom0less.md](docs/why-xen-dom0less.md): vì sao chọn Xen dom0less.
-- [docs/01-qemu-setup.md](docs/01-qemu-setup.md): ghi chép mốc 1 (Xen có dom0, bước đệm).
 - [docs/kernel-per-domain.md](docs/kernel-per-domain.md): mỗi domain một kernel, multiconfig.
