@@ -1,7 +1,8 @@
 # Mỗi domain một kernel: 6.6 và 6.6-rt trong cùng một Yocto
 
 > Ghi chú ngày 2026-11-04. Nhãn: [đã kiểm chứng] / [suy luận] / [đoán].
-> Trạng thái: **đã build được**; chưa boot thử hai domain.
+> Trạng thái: đã build và boot được hai domain (xem README). Kernel panic của một domain
+> chưa được kiểm chứng.
 
 ## Mục tiêu và kết quả
 
@@ -77,7 +78,10 @@ trong guest không cứu được [suy luận]. Muốn RT có ý nghĩa phải g
 
 ## Chưa làm / chưa kiểm
 
-- Boot thật hai domain (cần `/chosen`, bạn đang phác).
+- Kernel panic của một domain có làm domain kia dừng không.
+- Chi phí multiconfig: mỗi `TMPDIR` có sysroot native riêng (tốn thêm đĩa), và BitBake in nhiều
+  cảnh báo `Runqueue deadlocked on deferred tasks` khi ba config cùng chờ recipe native giống nhau;
+  build vẫn thành công [đã kiểm chứng].
 - Có thể tinh gọn kernel domU (fragment `docker`, `lxc`... của meta-virtualization được áp
   cho cả hai kernel, có thể thừa với guest) [đoán].
 
