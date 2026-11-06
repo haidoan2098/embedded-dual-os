@@ -34,3 +34,6 @@ BB_DISKMON_DIRS ??= "\
 
 PACKAGECONFIG:append:pn-qemu-system-native = " sdl"
 CONF_VERSION = "2"
+
+# Mỗi domU một config: meta-dualos-xen/conf/multiconfig/domu1.conf, domu2.conf
+BBMULTICONFIG = "domu1 domu2"
