@@ -1,9 +1,5 @@
 # Mỗi domain một kernel: 6.6 và 6.6-rt trong cùng một Yocto
 
-> Ghi chú ngày 2026-11-04. Nhãn: [đã kiểm chứng] / [suy luận] / [đoán].
-> Trạng thái: đã build và boot được hai domain (xem README). Kernel panic của một domain
-> chưa được kiểm chứng.
-
 ## Mục tiêu và kết quả
 
 Hai domU dom0less, hai kernel khác nhau, cùng release Yocto scarthgap:
